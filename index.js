@@ -1,13 +1,7 @@
 require('dotenv').config();
-const express = require('express');
-const app = express();
+const app = require('./src/app');
+
 const PORT = process.env.PORT || 3000;
-const db = require('./config/db')
-
-app.get('/', (req, res)=>{
-  res.send('Welcome to e-commerce api!')
-});
-
 
 
 app.listen(PORT, ()=>{
