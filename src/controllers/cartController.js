@@ -1,23 +1,33 @@
-
+const cartService = require('../services/cartService');
 
 module.exports = {
   async createNew(req, res){
-    res.send('here you go')
+    const data =  await cartService.createNew(1)
+    
+    res.status(201).send(data)
   },
 
   async getCartById(req, res){
-    res.send('here you go')
+    const data =  await cartService.getCartById(1)
+    
+    res.status(201).send(data)
   },
 
   async findAll(req, res){
-    res.send('here you go')
+    const data = await cartService.findAll();
+    
+    res.send(data);
   },
 
   async updateCart(req, res){
-    res.send('here you go')
+    const data =  await cartService.updateCart(1);
+    
+    res.status(201).send(data)
   },
 
-  async deleteCart(req, res){
-    res.send('here you go')
+  async deleteCartById(req, res){
+    const data =  await cartService.deleteCartById(1);
+    
+    res.status(201).send(data)
   }
 }

@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const ProductController = require('../controllers/userController');
+const ProductController = require('../controllers/productController');
 
-router.post('/createNew', ProductController.createNew);
+router.post('/', ProductController.createNew);
 router.get('/:productId', ProductController.getProductById);
 router.get('/', ProductController.findAll);
 router.put('/:userId', ProductController.updateProduct);

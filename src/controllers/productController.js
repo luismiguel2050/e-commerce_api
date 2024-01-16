@@ -17,7 +17,7 @@ module.exports = {
     res.send('here you go')
   },
 
-  async deleteProduct(req, res){
+  async deleteProductById(req, res){
     res.send('here you go')
   }
 }

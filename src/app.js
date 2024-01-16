@@ -6,5 +6,8 @@ app.get('/', (req, res)=>{
 });
 
 app.use('/api/users', require('./routes/userRoutes'));
+app.use('/api/carts', require('./routes/cartRoutes'));
+app.use('/api/orders', require('./routes/orderRoutes'));
+app.use('api/products', require('./routes/productRoutes'));
 
 module.exports = app;
