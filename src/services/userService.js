@@ -1,17 +1,17 @@
-
+const User = require('../db/models/user');
 
 
 module.exports = {
   async createNew(data){
-    return 'nice ' + data;
+    return 'nice ' + User.createNew(data);
   },
 
   async getUserById(data){
-    return 'nice' + data;
+    return 'nice' + User.getUserById(data);
   },
 
   async findAll(){
-    return 'nice';
+    return User.findAll();
   },
 
   async updateUser(data){
